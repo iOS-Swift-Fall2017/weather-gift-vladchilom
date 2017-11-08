@@ -3,7 +3,7 @@
 //  WeatherGift
 //
 //  Created by Vlad Chilom on 10/31/17.
-//  Copyright © 2017 vchilom. All rights reserved.
+//  Copyright © 2017 Vlad Chilom. All rights reserved.
 //
 
 
@@ -11,6 +11,7 @@ import UIKit
 import GooglePlaces
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
