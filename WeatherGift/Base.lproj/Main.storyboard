@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +23,86 @@
         </array>
     </customFonts>
     <scenes>
+        <!--AboutVC-->
+        <scene sceneID="fOj-uo-Arr">
+            <objects>
+                <viewController id="Kfe-H4-u6u" customClass="AboutVC" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Twe-QE-woH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcv-zb-1bW">
+                                <rect key="frame" x="16" y="617" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eFs-EE-p1g"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="Kfe-H4-u6u" eventType="touchUpInside" id="sBF-PE-vcf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Gift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNB-qs-x5L">
+                                <rect key="frame" x="16" y="48" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Qfi-hu-TCw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-cr-8nY">
+                                <rect key="frame" x="16" y="100" width="343" height="316"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by Vlad Chilom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7M4-xD-oB3">
+                                <rect key="frame" x="16" y="424" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="f9a-b0-Yeg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-ip-b2l">
+                                <rect key="frame" x="16" y="495" width="122" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="XOf-Jr-wok"/>
+                                    <constraint firstAttribute="height" constant="71" id="udE-jr-TKO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="rqg-lw-KhR">
+                                <rect key="frame" x="146" y="492" width="213" height="71"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7M4-xD-oB3" firstAttribute="leading" secondItem="ayg-ip-b2l" secondAttribute="leading" id="EVF-2r-sw3"/>
+                            <constraint firstItem="Hcv-cr-8nY" firstAttribute="trailing" secondItem="7M4-xD-oB3" secondAttribute="trailing" id="Ilg-MK-gbj"/>
+                            <constraint firstItem="Hcv-cr-8nY" firstAttribute="top" secondItem="GNB-qs-x5L" secondAttribute="bottom" constant="8" symbolic="YES" id="LKZ-ht-99l"/>
+                            <constraint firstItem="ayg-ip-b2l" firstAttribute="top" secondItem="7M4-xD-oB3" secondAttribute="bottom" constant="11" id="QAV-pH-UTF"/>
+                            <constraint firstItem="7M4-xD-oB3" firstAttribute="trailing" secondItem="rqg-lw-KhR" secondAttribute="trailing" id="QhV-kC-GAJ"/>
+                            <constraint firstItem="Hcv-cr-8nY" firstAttribute="leading" secondItem="7M4-xD-oB3" secondAttribute="leading" id="RwG-5Q-WgZ"/>
+                            <constraint firstItem="GNB-qs-x5L" firstAttribute="trailing" secondItem="Hcv-cr-8nY" secondAttribute="trailing" id="V97-ik-FjD"/>
+                            <constraint firstItem="mcv-zb-1bW" firstAttribute="top" secondItem="ayg-ip-b2l" secondAttribute="bottom" constant="51" id="X4T-88-eHc"/>
+                            <constraint firstItem="GNB-qs-x5L" firstAttribute="leading" secondItem="Twe-QE-woH" secondAttribute="leadingMargin" id="f5o-to-1t1"/>
+                            <constraint firstItem="SIU-rG-g9a" firstAttribute="bottom" secondItem="rqg-lw-KhR" secondAttribute="bottom" constant="104" id="fAe-b8-2fd"/>
+                            <constraint firstItem="7M4-xD-oB3" firstAttribute="top" secondItem="Hcv-cr-8nY" secondAttribute="bottom" constant="8" symbolic="YES" id="iBV-Ji-IsK"/>
+                            <constraint firstItem="GNB-qs-x5L" firstAttribute="leading" secondItem="Hcv-cr-8nY" secondAttribute="leading" id="m72-TL-7oD"/>
+                            <constraint firstAttribute="bottom" secondItem="mcv-zb-1bW" secondAttribute="bottom" constant="20" symbolic="YES" id="mHX-Gh-aXK"/>
+                            <constraint firstItem="ayg-ip-b2l" firstAttribute="leading" secondItem="mcv-zb-1bW" secondAttribute="leading" id="n8x-Iv-oYX"/>
+                            <constraint firstItem="GNB-qs-x5L" firstAttribute="trailing" secondItem="Twe-QE-woH" secondAttribute="trailingMargin" id="nx4-yu-vKJ"/>
+                            <constraint firstItem="rqg-lw-KhR" firstAttribute="leading" secondItem="ayg-ip-b2l" secondAttribute="trailing" constant="8" symbolic="YES" id="qRX-cg-6P2"/>
+                            <constraint firstItem="GNB-qs-x5L" firstAttribute="top" secondItem="SIU-rG-g9a" secondAttribute="top" constant="28" id="sYl-Iz-qMV"/>
+                            <constraint firstItem="rqg-lw-KhR" firstAttribute="top" secondItem="7M4-xD-oB3" secondAttribute="bottom" constant="8" symbolic="YES" id="stI-3Y-7xI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SIU-rG-g9a"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gg9-MM-y7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-711.20000000000005" y="131.78410794602701"/>
+        </scene>
         <!--DetailVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -223,6 +304,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="sC6-lm-zbO" customClass="PageVC" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="QC1-6Y-VyL" kind="presentation" identifier="ToListVC" id="Tre-Gx-fs7"/>
+                        <segue destination="Kfe-H4-u6u" kind="presentation" identifier="ToAboutVC" id="fOR-g6-uf7"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDe-dr-zCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -297,7 +379,10 @@
     </scenes>
     <resources>
         <image name="clear-day" width="384" height="384"/>
+        <image name="google" width="216" height="27"/>
         <image name="raindrop" width="18" height="20"/>
+        <image name="sky" width="1904" height="759"/>
         <image name="small-cloudy" width="384" height="384"/>
+        <image name="weather" width="394" height="394"/>
     </resources>
 </document>

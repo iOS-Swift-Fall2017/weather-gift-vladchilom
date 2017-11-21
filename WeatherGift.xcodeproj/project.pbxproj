@@ -20,6 +20,7 @@
 		BF40AE231FB23D1600852E98 /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40AE221FB23D1600852E98 /* WeatherDetail.swift */; };
 		BF40AE251FB23E1600852E98 /* HourlyWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40AE241FB23E1600852E98 /* HourlyWeatherCell.swift */; };
 		BF40AE271FB23E2600852E98 /* TimeInterval+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40AE261FB23E2600852E98 /* TimeInterval+format.swift */; };
+		BF5025721FC4A7D300616BE8 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5025711FC4A7D300616BE8 /* AboutVC.swift */; };
 		CDEF1A3A5D010DBBEEAEFF51 /* Pods_WeatherGift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AB1AD83B578398B9701FE1 /* Pods_WeatherGift.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		BF40AE221FB23D1600852E98 /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		BF40AE241FB23E1600852E98 /* HourlyWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCell.swift; sourceTree = "<group>"; };
 		BF40AE261FB23E2600852E98 /* TimeInterval+format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+format.swift"; sourceTree = "<group>"; };
+		BF5025711FC4A7D300616BE8 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		C4AB1AD83B578398B9701FE1 /* Pods_WeatherGift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherGift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				BF40AE241FB23E1600852E98 /* HourlyWeatherCell.swift */,
 				BF40AE261FB23E2600852E98 /* TimeInterval+format.swift */,
 				87BD61261F9546D200C67577 /* Main.storyboard */,
+				BF5025711FC4A7D300616BE8 /* AboutVC.swift */,
 				87BD61291F9546D200C67577 /* Assets.xcassets */,
 				87BD612B1F9546D200C67577 /* LaunchScreen.storyboard */,
 				87BD612E1F9546D200C67577 /* Info.plist */,
@@ -257,6 +260,7 @@
 				88BD71A51F95630C0002EF27 /* PageVC.swift in Sources */,
 				87BD61231F9546D100C67577 /* AppDelegate.swift in Sources */,
 				87BD61351F95475900C67577 /* DetailVC.swift in Sources */,
+				BF5025721FC4A7D300616BE8 /* AboutVC.swift in Sources */,
 				87AC5E2D1FA8DD1200AEB4B2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

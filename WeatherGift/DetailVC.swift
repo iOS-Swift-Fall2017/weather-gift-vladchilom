@@ -65,6 +65,13 @@ class DetailVC: UIViewController {
     collectionView.reloadData()
   }
   
+  func showAlert(title: String, message: String) {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alertController.addAction(alertAction)
+    present(alertController, animated: true, completion: nil)
+  }
+  
 }
 
 extension DetailVC: CLLocationManagerDelegate {
@@ -81,10 +88,25 @@ extension DetailVC: CLLocationManagerDelegate {
     case .authorizedAlways, .authorizedWhenInUse:
       locationManger.requestLocation()
     case .denied:
-      print("There is no location to show")
+      showAlertToPrivacySettings(title: "Location Services not Authorized", message: "Please go to settings in order to enable location services.")
     case .restricted:
-      print("No Access")
+      showAlert(title: "Locations Services Restricted",
+                message: "Parental controls may be restricting location services.")
     }
+  }
+  
+  func showAlertToPrivacySettings(title: String, message: String) {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    guard let settingsURL = URL(string: UIApplicationOpenSettingsURLString) else {
+      return
+    }
+    let settingsAction = UIAlertAction(title: "Settings", style: .default) { value in
+      UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+    }
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+    alertController.addAction(settingsAction)
+    alertController.addAction(cancelAction)
+    present(alertController, animated: true, completion: nil)
   }
   
   func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
